@@ -2,24 +2,24 @@ import "./App.css";
 
 export default function Movies({movie}) {
     return (
-        <div className={'movies text-center'}>
-            <div>
-                <img
-                    src={
-                        movie.Poster !== "N/A"
-                            ? movie.Poster
-                            : "https://via.placeholder.com/300"
-                    }
-                    alt={"movie"}
-                    className={'movie-img mt-3'}
-                />
-            </div>
-            <div className={'movie-text'}>
-                <div>Title: {movie.Title}</div>
-                <div>Year: {movie.Year}</div>
-                <div>Genre: {movie.Type}</div>
-                <div>imbd id: {movie.imdbID}</div>
-            </div>
-        </div>
+        <ul className="cards">
+            <li>
+                <div className="card">
+                    <img src={movie.Poster} className="card__image" alt=""/>
+                    <div className="card__overlay">
+                        <div className="card__header">
+                            <svg className="card__arc" xmlns="http://www.w3.org/2000/svg">
+                                <path/>
+                            </svg>
+                            <div className="card__header-text">
+                                <h3 className="card__title">{movie.Title}</h3>
+                                <span className="card__status">Year of Release: {movie.Year}</span>
+                            </div>
+                        </div>
+                        <p className="card__description">IMDB-Code: {movie.imdbID}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
     )
 }
