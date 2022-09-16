@@ -4,7 +4,7 @@ import Movies from "./Movies";
 import {Col, Container, FloatingLabel, Form, Row} from "react-bootstrap";
 import "./App.css";
 
-const API_URL = "http://www.omdbapi.com?apikey=7912e3e3";
+const API_URL = "https://www.omdbapi.com?apikey=7912e3e3";
 
 const defaultMovies = [
     {
